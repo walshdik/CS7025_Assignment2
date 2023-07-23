@@ -1,0 +1,260 @@
+body {
+  background-color: #ffedfd;
+}
+.parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.box {
+  background-color: #fffdfa;
+  border-radius: 25px;
+  width: 360px;
+  padding: 50px;
+  margin: 150px;
+}
+.box2 {
+  background-color: #fffdfa;
+  border-radius: 25px;
+  width: 1200px;
+  padding: 50px;
+  margin: 150px;
+}
+.box3 {
+  background-color: #fffdfa;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 750px;
+  padding: 50px;
+  margin: 150px;
+}
+.box4 {
+  background-color: #fffdfa;
+  border-radius: 25px;
+  width: 850px;
+  padding: 50px;
+  margin: 150px;
+}
+h1 {
+  color: #ff5de7;
+  font-family: Verdana, sans-serif;
+  text-align: center;
+}
+
+#message {
+  color: #ff5de7;
+  font-size: 15px;
+}
+
+#commentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#comments {
+  color: #ff5de7;
+  font-size: 15px;
+  text-align: left;
+}
+
+#comment {
+  background-color: #ffedfd;
+  border-radius: 10px;
+  margin: 5px;
+  width: 100%;
+  padding: 5px;
+}
+
+#username,
+#password {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #ff5de7;
+  color: #ff5de7;
+  font-family: Verdana, sans-serif;
+}
+
+#comment-text {
+  color: #ff5de7;
+  border-radius: 10px;
+  border: 2px solid #ff5de7;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+#comment-text:focus {
+  outline: 2px solid #ff5de7;
+}
+
+#timeStamp {
+  color: #ff5de7;
+  font-size: 12px;
+  text-align: left;
+}
+
+form {
+  color: #ff5de7;
+  font-family: Verdana, sans-serif;
+  text-align: center;
+}
+
+#submit,
+#submit2,
+#submit3,
+#submit4 {
+  border-radius: 14px;
+  color: #ff5de7;
+  background-color: #ffecfc;
+  font-family: Verdana, sans-serif;
+  border: 0;
+  outline: 0;
+  margin: 10px;
+  padding: 8px;
+  width: 170px;
+  font-size: 20px;
+}
+
+#submit1 {
+  border-radius: 14px;
+  color: #ff5de7;
+  background-color: #ffecfc;
+  font-family: Verdana, sans-serif;
+  border: 0;
+  outline: 0;
+  margin: 10px;
+  padding: 8px;
+  width: 240px;
+  font-size: 20px;
+}
+
+input::file-selector-button {
+  border-radius: 14px;
+  color: #ff5de7;
+  background-color: #ffecfc;
+  font-family: Verdana, sans-serif;
+  border: 0;
+  outline: 0;
+  margin: 10px;
+  padding: 8px;
+  width: 120px;
+  font-size: 15px;
+}
+
+p {
+  color: #ff5de7;
+  font-family: Verdana, sans-serif;
+  text-align: center;
+  font-size: 12px;
+}
+
+.logoImg {
+  width: 100%;
+  padding: 20px;
+  height: auto;
+  max-width: 80px;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  display: inline-block;
+}
+
+.errorLogo {
+  width: 100%;
+  max-width: 350px;
+}
+
+#logo img:first-child {
+  display: block;
+}
+
+#logo img:last-child {
+  display: none;
+}
+
+#logo:hover img:first-child {
+  display: none;
+}
+
+#logo:hover img:last-child {
+  display: block;
+}
+
+a {
+  color: #ff5de7;
+  font-family: Verdana, sans-serif;
+}
+#bye {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+#likeButton {
+  background-image: url("../like.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 20px;
+  height: auto;
+  max-width: 80px;
+}
+.likes {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+#gridImg {
+  object-fit: cover;
+  width: 230px;
+  height: 230px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.grid-item {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+
+.grid-item p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.uploaderTime {
+  left: 0px;
+  color: #ff5de7;
+  font-family: Verdana, sans-serif;
+  text-align: center;
+  font-size: 12px;
+}
+
+.uploader-info {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.delete {
+  margin-left: auto;
+}

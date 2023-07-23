@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Upload an image</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="logo">
+      <a href="/photos">
+        <img src="/logo5.png" alt="Logo" class="logoImg" />
+        <img src="/logo4.png" alt="Logo" class="logoImg" />
+      </a>
+    </div>
+    <div class="parent">
+      <div class="box">
+        <h1>Upload your image</h1>
+        <br /><br /><br />
+        <p id="message"><% if (message) { %> <%= message %> <% } %></p>
+        <br /><br />
+        <form action="/new-image" method="post" enctype="multipart/form-data">
+          <input type="file" name="userImage" /><br /><br />
+          <input type="submit" id="submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

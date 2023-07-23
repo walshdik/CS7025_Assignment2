@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="logo">
+      <a href="photos">
+        <img src="/logo5.png" alt="Logo" class="logoImg" />
+        <img src="/logo4.png" alt="Logo" class="logoImg" />
+      </a>
+    </div>
+    <div class="parent">
+      <div class="box">
+        <h1>Home Page</h1>
+        <br />
+        <% if (loggedin) { %>
+        <p id="message"><%= greet %> <%= name %>!</p>
+        <br /><br />
+        <form action="userImages" method="GET">
+          <input type="submit" id="submit4" value="My Images" />
+        </form>
+        <form action="photos" method="GET">
+          <input type="submit" id="submit4" value="View Gallery" />
+        </form>
+        <form method="GET" action="upload">
+          <button type="submit" id="submit2">Upload an Image</button
+          ><br /><br />
+        </form>
+        <form method="POST" action="logout">
+          <button type="submit" id="submit3">Logout</button>
+        </form>
+        <% } else { %> <% if (message) { %>
+        <p id="message"><%= message %></p>
+        <br />
+        <% } %>
+        <form action="login" method="POST">
+          <input type="submit" id="submit3" value="Log in" />
+        </form>
+        <form action="photos" method="GET">
+          <input type="submit" id="submit4" value="View gallery" />
+        </form>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

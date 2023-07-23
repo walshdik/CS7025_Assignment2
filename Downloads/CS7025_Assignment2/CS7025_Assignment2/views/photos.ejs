@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gallery</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="logo">
+      <a href="home">
+        <img src="/logo5.png" alt="Logo" class="logoImg" />
+        <img src="/logo4.png" alt="Logo" class="logoImg" />
+      </a>
+    </div>
+    <div class="parent">
+      <div class="box2">
+        <div class="grid-container">
+          <% if (images.length > 0) { %> <% images.reverse().forEach((image) =>
+          { %>
+          <div class="grid-item">
+            <a href="/photos/<%= image.id %>">
+              <img
+                src="<%= image.url %>"
+                alt="<%= image.filename %>"
+                id="gridImg"
+                style="max-width: 200px"
+              />
+            </a>
+            <div class="uploaderTime">
+              <p>
+                Uploaded by
+                <strong
+                  ><a href="/otherUsersImages?username=<%= image.uploader %>"
+                    ><%= image.uploader %></a
+                  ></strong
+                >
+              </p>
+              <br />
+              <%= image.upload_time %>
+            </div>
+          </div>
+          <% }); %> <% } else { %>
+          <p>No images found.</p>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

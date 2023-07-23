@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Image successfully uploaded!</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="logo">
+      <a href="photos">
+        <img src="/logo5.png" alt="Logo" class="logoImg" />
+        <img src="/logo4.png" alt="Logo" class="logoImg" />
+      </a>
+    </div>
+    <div class="parent">
+      <div class="box4">
+        <h1>Image uploaded!</h1>
+        <p><%= data.imageName %></p>
+        <p><img src="<%= data.imageSourceUrl %>" /></p>
+        <form action="upload" method="GET">
+          <input type="submit" id="submit1" value="Upload another image" />
+        </form>
+        <form action="photos" method="GET">
+          <input type="submit" id="submit" value="View gallery" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

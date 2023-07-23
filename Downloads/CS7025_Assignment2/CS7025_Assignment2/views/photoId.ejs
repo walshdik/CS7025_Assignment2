@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title><%= image.filename %></title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="logo">
+      <a href="/photos">
+        <img src="/logo5.png" alt="Logo" class="logoImg"/>
+        <img src="/logo4.png" alt="Logo" class="logoImg"/>
+      </a>
+    </div>
+    <div class="parent">
+      <div class="box3">
+        <img style="width:100%;" src="<%= image.url %>" alt="<%= image.filename %>"><br><br>
+        <p>Uploaded by <a href="/otherUsersImages?username=<%= image.uploader %>"><%= image.uploader %></a></p>
+        <p>Uploaded on <%= image.upload_time %></p>
+        <% if (loggedin) { %>
+          <div class="likes">
+            <form method="POST" action="/photos/<%= image.id %>/like">
+              <input type="hidden" name="image_id" value="<%= image.id %>">
+              <button id="likeButton" type="submit"></button>
+              <p><%= likesCount %> likes</p>
+            </form>
+            <div class="delete">
+              <form action="/photos/<%= image.id %>/delete" method="POST">
+                <button id="submit" type="submit">Delete</button>
+              </form>
+            </div>
+          </div>
+          <form method="post" action="/photos/<%= image.id %>/comment">
+            <div class="comment">
+              <textarea id="comment-text" name="comment_text"></textarea>
+              <button type="submit" id="submit">Post</button>
+            </div>
+          </form>
+          <% comments.forEach(comment => { %>
+            <div id="comment">
+              <p id="comments"><strong><%= comment.username %>:</strong> <%= comment.comment_text %>
+                <p id="timeStamp"><%= comment.upload_time %></p>
+              </p>
+            </div>
+          <% }) %>
+        <% } else { %>
+          <div class="likes">
+            <form method="POST" action="/photos/<%= image.id %>/like">
+              <input type="hidden" name="image_id" value="<%= image.id %>">
+              <button id="likeButton" type="submit"></button>
+              <p><%= likesCount %> likes</p>
+            </form>
+          </div>
+          <% comments.forEach(comment => { %>
+            <div id="comment">
+              <p id="comments"><strong><%= comment.username %>:</strong> <%= comment.comment_text %>
+                <p id="timeStamp"><%= comment.upload_time %></p>
+              </p>
+            </div>
+          <% }) %>
+        <% } %> 
+  </body>
+</html>

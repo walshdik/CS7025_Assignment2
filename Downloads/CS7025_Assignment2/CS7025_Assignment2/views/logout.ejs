@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Log Out</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="logo">
+      <a href="/photos">
+        <img src="/logo5.png" alt="Logo" class="logoImg" />
+        <img src="/logo4.png" alt="Logo" class="logoImg" />
+      </a>
+    </div>
+    <div class="parent">
+      <div class="box">
+        <h1>Logged out</h1>
+        <br />
+        <img
+          src="logo.gif"
+          id="bye"
+          style="height: auto; max-width: 350px"
+        /><br />
+        <p id="message"><% if (message) { %> <%= message %> <% } %></p>
+        <br /><br />
+        <form action="photos" method="get">
+          <button type="submit" id="submit">View all images</button>
+        </form>
+        <form action="login" method="get">
+          <button type="submit" id="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

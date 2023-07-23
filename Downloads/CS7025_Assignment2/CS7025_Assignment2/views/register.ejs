@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="logo">
+      <a href="photos">
+        <img src="/logo5.png" alt="Logo" class="logoImg" />
+        <img src="/logo4.png" alt="Logo" class="logoImg" />
+      </a>
+    </div>
+    <div class="parent">
+      <div class="box">
+        <h1>What are you waiting for?</h1>
+        <br /><br />
+        <% if (message) { %>
+        <p id="message"><%= message %></p>
+        <% } %><br /><br />
+        <form method="POST" action="/register">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="name" /><br /><br /><br />
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            name="password"
+          /><br /><br /><br /><br />
+          <input type="submit" id="submit" value="Register" />
+          <p>Or <a href="login">Log in</a></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
